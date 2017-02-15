@@ -29,7 +29,7 @@ function draw() {
         beginShape();
         textSize(12);
         fill(255);
-        text("Kliknij aby rozpocząć grę!", 435, 325);
+        text("Click to start the game!", 435, 325);
         endShape();
     }
     else if (!start) {
@@ -44,7 +44,7 @@ function draw() {
     endShape();
     beginShape();
     textSize(12);
-    text(txt3, 415, 380);
+    text(txt3, 425, 380);
     endShape();
 }
 
@@ -84,9 +84,9 @@ function timer() {
 }
 function endGame() {
     
-    txt1 = "Koniec gry.";
-    txt2 = "Twój wynik to: " + score;
-    txt3 = "Naciśnij spację aby kontynuować."
+    txt1 = "Game over.";
+    txt2 = "Your score is: " + score;
+    txt3 = "Press space to continue."
     ended = true;
     noLoop();
 }
