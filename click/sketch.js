@@ -9,10 +9,12 @@ var score = 0;
 var txt1 = "";
 var txt2 = "";
 var txt3 = "";
+var click;
+var endSound;
 
-function randomPosition() {
-    parX = random(width - 80);
-    parY = random(height - 80);
+function preload() {
+    endSound = loadSound('end.wav');
+    click = loadSound('click.wav');
 }
 
 function setup() {
@@ -44,61 +46,6 @@ function draw() {
     endShape();
     beginShape();
     textSize(12);
-    text(txt3, 445, 380);
+    text(txt3, 430, 380);
     endShape();
-}
-
-function mouseClicked() {
-    var clicked = particle.clicked();
-    if (!ended){
-        if (clicked) {
-            randomPosition();
-            particle.update(parX, parY);
-            score += 1;
-        }
-    }
-    if (start) {
-        start = false;
-    }
-}
-
-function keyPressed() {
-    if (keyCode === 32) {
-        if (ended) {
-        reset();
-        }
-    }
-}
-
-function timer() {
-    frame++;
-    sec = floor(frame / 30);
-    beginShape();
-    textSize(24);
-    fill(255, 200);
-    text("Time: " + sec, 0, 25);
-    endShape();
-    if (sec == end){
-        endGame();
-    }
-}
-function endGame() {
-    
-    txt1 = "Game over.";
-    txt2 = "Your score is: " + score;
-    txt3 = "Press space to continue."
-    ended = true;
-    noLoop();
-}
-function reset() {
-    ended = false;
-    frame = 0;
-    sec = 0;
-    score = 0;
-    txt1 = "";
-    txt2 = "";
-    txt3 = "";
-    randomPosition();
-    particle.update(parX, parY);
-    loop();
 }
