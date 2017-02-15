@@ -11,14 +11,22 @@ var txt2 = "";
 var txt3 = "";
 var click;
 var endSound;
+var winH;
 
 function preload() {
     endSound = loadSound('end.wav');
     click = loadSound('click.wav');
+    winH = windowHeight;
+    if (winH < 650){
+        winH = winH
+    }
+    else {
+        winH = 650;
+    }
 }
 
 function setup() {
-    var canvas = createCanvas(1024, 650);
+    var canvas = createCanvas(1024, winH);
     canvas.parent("container");
     randomPosition();
     particle = new Particle(parX, parY);
