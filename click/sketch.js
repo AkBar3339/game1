@@ -76,7 +76,7 @@ function timer() {
     beginShape();
     textSize(24);
     fill(255, 200);
-    text("Czas: " + sec, 0, 25);
+    text("Time: " + sec, 0, 25);
     endShape();
     if (sec == end){
         endGame();
