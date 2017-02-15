@@ -32,18 +32,20 @@ function reset() {
 }
 
 function mouseClicked() {
-    var clicked = particle.clicked();
-    if (!ended){
-        if (clicked) {
-            randomPosition();
-            particle.update(parX, parY);
-            score += 1;
-            click.setVolume(0.5);
-            click.play();
+    if (mouseX >= 0 && mouseX <= width && mouseY >=0 && mouseY <= height) {
+        var clicked = particle.clicked();
+        if (!ended){
+            if (clicked) {
+                randomPosition();
+                particle.update(parX, parY);
+                score += 1;
+                click.setVolume(0.5);
+                click.play();
+            }
         }
-    }
-    if (start) {
-        start = false;
+        if (start) {
+            start = false;
+        }
     }
 }
 

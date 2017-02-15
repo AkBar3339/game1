@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-    var canvas = createCanvas(1000, 650);
+    var canvas = createCanvas(1024, 650);
     canvas.parent("container");
     randomPosition();
     particle = new Particle(parX, parY);
