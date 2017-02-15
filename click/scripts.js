@@ -13,7 +13,7 @@ function timer() {
 function endGame() {
     txt1 = "Game over.";
     txt2 = "Your score is: " + score;
-    txt3 = "Press spacebar to continue."
+    txt3 = "Press enter key to continue."
     ended = true;
     noLoop();
     endSound.play();
@@ -50,7 +50,7 @@ function mouseClicked() {
 }
 
 function keyPressed() {
-    if (keyCode === 32) {
+    if (keyCode === ENTER) {
         if (ended) {
         reset();
         }
