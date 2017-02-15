@@ -39,7 +39,7 @@ function draw() {
         beginShape();
         textSize(12);
         fill(255);
-        text("Click to start the game!", 435, 325);
+        text("Click to start the game!", 435, (height / 2));
         endShape();
     }
     else if (!start) {
@@ -49,11 +49,11 @@ function draw() {
     beginShape();
     textSize(32);
     fill(255);
-    text(txt1, 425, 320);
-    text(txt2, 390, 355);
+    text(txt1, 425, (height / 2));
+    text(txt2, 390, (height / 2 + 30));
     endShape();
     beginShape();
     textSize(12);
-    text(txt3, 430, 380);
+    text(txt3, 430, height / 2 + 50);
     endShape();
 }
