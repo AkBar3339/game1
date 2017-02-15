@@ -44,7 +44,7 @@ function draw() {
     endShape();
     beginShape();
     textSize(12);
-    text(txt3, 425, 380);
+    text(txt3, 445, 380);
     endShape();
 }
 
